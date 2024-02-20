@@ -99,7 +99,12 @@ header .container nav{
     display: flex;
     align-items: center;
     justify-content: flex-end;
+   
 }
+header nav .drop{
+    position: relative;
+}
+
 header .container .toggle-menu{
     color: white;
     font-size: 22px;
@@ -112,6 +117,7 @@ header .container .toggle-menu{
 header .container nav ul{
     display: flex;
     transition: 0.3s;
+    
 }
 header .container nav ul li a{
     display: block;
@@ -122,26 +128,28 @@ header .container nav ul li a{
     position: relative;
     z-index: 3;
 }
+
 @media(max-width:767px){
     header .container nav ul{
+       box-shadow: 0 0 5px rgba(156, 145, 145, 0.5) ;
         display: none;
+        width:calc( 100vw - 30px);
+        background-color: black;
+        z-index: 100;
     }
-     header .container .toggle-menu:hover + ul{
-        display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: rgb(0 0 0 /50%);
-     }
-     header .container nav ul li a{
+    header .container .drop:hover  ul{
+     display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:  100%;
+    right: -80px;
+    }
+    header .container nav ul li a{
         padding: 15px;
-     }
-}
-header .container nav ul li{
+    }
 
 }
+
 
 header .container nav ul  a.active ,
 header .container nav ul  a:hover{
